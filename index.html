@@ -69,53 +69,63 @@
   <!-- advantage section -->
 
   <section class="how-to-start section">
-    <div class="how-to-start__wrapper layout-positioner">
-      <h3 class="how-to-start__title">Как начать работу</h3>
-      <ul class="how-to-start__list">
-        <li class="how-to-start__item">
-          <span class="how-to-start__number">1</span>
-          <p class="how-to-start__text">Оставьте заявку </p>
-        </li>
-        <li class="how-to-start__item">        
-          <span class="how-to-start__number">2</span>
-          <p class="how-to-start__text">Мы позвоним вам, чтобы уточнить детали </p>
-        </li>
-        <li class="how-to-start__item">        
-          <span class="how-to-start__number">3</span>
-          <p class="how-to-start__text">Оформитесь в таксопарке </p>
-        </li>
-        <li class="how-to-start__item">        
-          <span class="how-to-start__number">4</span>
-          <p class="how-to-start__text">Выходите на линию и начинайте зарабатывать </p>        
-        </li>
-      </ul>
+    <div class="how-to-start__col how-to-start__col--1">
+      <div class="how-to-start__wrapper">
+        <h3 class="how-to-start__title">Как начать работу</h3>
+        <ul class="how-to-start__list">
+          <li class="how-to-start__item">
+            <span class="how-to-start__number">1</span>
+            <p class="how-to-start__text">Оставьте заявку </p>
+          </li>
+          <li class="how-to-start__item">        
+            <span class="how-to-start__number">2</span>
+            <p class="how-to-start__text">Мы позвоним вам, чтобы уточнить детали </p>
+          </li>
+          <li class="how-to-start__item">        
+            <span class="how-to-start__number">3</span>
+            <p class="how-to-start__text">Оформитесь в таксопарке </p>
+          </li>
+          <li class="how-to-start__item">        
+            <span class="how-to-start__number">4</span>
+            <p class="how-to-start__text">Выходите на линию и начинайте зарабатывать </p>        
+          </li>
+        </ul>
+      </div>
+      <!-- how to start wrapper layout-positioner -->
     </div>
-    <!-- how to start wrapper layout-positioner -->
-    <div class="how-to-start__bgi"></div>
+    <!-- how-to-start__col how-to-start__col--1 -->
+    <div class="how-to-start__col how-to-start__col--2"></div><!-- how-to-start__col--2 -->
   </section>
   <!-- ho-to-start section -->
 
   <section class="submit section">
-    <div class="submit__wrapper layout-positioner">
-      <a name="submit-section" id="submit-section"></a>
-      <h3 class="submit__title">Оставьте заявку</h3>
-      <form action="URL" class="form" method="POST">
-        <fieldset class="form__fieldset">
-          <label class="form__label" for="name">ФИО<sup>&#10059;</sup></label>
-          <input class="form__input" type="text" name="name" id="name">
-          <label class="form__label" for="phone">Номер телефона<sup>&#10059;</sup></label>
-          <input class="form__input" type="text" name="phone" id="phone">
-          <label class="form__label form__label--agree" for="checkbox">
-            <input class="form__input" type="checkbox" name="checkbox" id="checkbox" required>
-            <p class="form__agree">Настоящим даю согласие сервиса на обработку и передачу моих персональных данных 
-            третьим лицам с целью обеспечения возможности использования сервиса Яндекс.Такси в качестве водителя такси</p>
-          </label>
-          <button class="form__btn btn" type="submit">Оставить заявку</button>
-        </fieldset>
-      </form>
+    <div class="submit__col submit__col--1">
+      <div class="submit__wrapper">
+        <a name="submit-section" id="submit-section"></a>
+        <h3 class="submit__title">Оставьте заявку</h3>
+        <form action="URL" class="form" method="POST">
+          <fieldset class="form__fieldset">
+            <label class="form__label" for="name">
+              <span class="form__label-text">ФИО<sup>&#10059;</sup></span>
+              <input class="form__input" type="text" name="name" id="name">
+            </label>
+            <label class="form__label" for="phone">
+              <span class="form__label-text">Номер телефона<sup>&#10059;</sup></span>
+              <input class="form__input" type="text" name="phone" id="phone">
+            </label>
+            <label class="form__label form__label--agree" for="checkbox">
+              <input class="form__input" type="checkbox" name="checkbox" id="checkbox" required>
+              <p class="form__agreement">Настоящим даю согласие сервиса на обработку и передачу моих персональных данных 
+              третьим лицам с целью обеспечения возможности использования сервиса Яндекс.Такси в качестве водителя такси</p>
+            </label>
+            <button class="form__btn btn" type="submit">Оставить заявку</button>
+          </fieldset>
+        </form>
+      </div>
+      <!-- submit wrapper layout-positioner -->
     </div>
-    <!-- submit wrapper layout-positioner -->
-    <div class="submit__bgi"></div>
+    <!-- submit__col--1 -->
+    <div class="submit__col submit__col--2"></div><!-- submit__col--2 -->
   </section>
   <!-- submit section -->
 
