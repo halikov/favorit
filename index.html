@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fonts link -->
+  <!--
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  -->
+  <!-- styles link -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Фаворит</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="header__wrapper layout-positioner">
+      <div class="header__title">
+        <h1 class="title">Фаворит</h1>
+        <p class="ya-partner-text">Партнёр Яндекс.Такси</p>
+      </div>
+      <div class="header__phone">
+        <button class="header__btn btn" type="button">
+          <a href="#submit-section" class="btn__link">Оставить заявку</a>
+        </button>
+      </div>
+    </div>
+    <!-- header wrapper layout positioner -->
+  </header>
+  <!-- header -->
+
+  <section class="jumbotron section">
+    <div class="jumbotron__wrapper layout-positioner">
+      <h2 class="section__title"></h2>
+      <p class="jumbotron__text">Работа <br> водителем такси <span class="jumbotron__yandex">с партнёром Яндекс.Такси</span></p>
+      <button class="jumbotron__btn btn" type="button">
+        <a href="#submit-section" class="btn__link">Оставить заявку</a>
+      </button>
+    </div>
+    <!-- jumbotron wrapper -->
+  </section>
+  <!-- jumbotron section -->
+
+  <section class="advantages section">
+    <div class="advantages__wrapper layout-positioner">
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <span class="advantages__icon advantages__icon--clock"></span>
+          <h3 class="advantages__title">Быстрый старт</h3>
+          <p class="advantages__text">От заявки до первого клиента — несколько минут</p>
+        </li>
+        
+        <li class="advantages__item">
+          <span class="advantages__icon advantages__icon--wallet"></span>
+          <h3 class="advantages__title">Деньги — сразу</h3>
+          <p class="advantages__text">Оплату за наличные заказы вы получите в первый день работы</p>
+        </li>
+
+        <li class="advantages__item">        
+          <span class="advantages__icon advantages__icon--calendar"></span>
+          <h3 class="advantages__title">Удобный график</h3>
+          <p class="advantages__text">Работайте несколько часов в день или полную смену</p>
+        </li>
+      </ul>
+    </div>
+    <!-- advantages wrapper layout-positioner -->
+  </section>
+  <!-- advantage section -->
+
+  <section class="how-to-start section">
+    <div class="how-to-start__wrapper layout-positioner">
+      <h3 class="how-to-start__title">Как начать работу</h3>
+      <ul class="how-to-start__list">
+        <li class="how-to-start__item">
+          <span class="how-to-start__number">1</span>
+          <p class="how-to-start__text">Оставьте заявку </p>
+        </li>
+        <li class="how-to-start__item">        
+          <span class="how-to-start__number">2</span>
+          <p class="how-to-start__text">Мы позвоним вам, чтобы уточнить детали </p>
+        </li>
+        <li class="how-to-start__item">        
+          <span class="how-to-start__number">3</span>
+          <p class="how-to-start__text">Оформитесь в таксопарке </p>
+        </li>
+        <li class="how-to-start__item">        
+          <span class="how-to-start__number">4</span>
+          <p class="how-to-start__text">Выходите на линию и начинайте зарабатывать </p>        
+        </li>
+      </ul>
+    </div>
+    <!-- how to start wrapper layout-positioner -->
+    <div class="how-to-start__bgi"></div>
+  </section>
+  <!-- ho-to-start section -->
+
+  <section class="submit section">
+    <div class="submit__wrapper layout-positioner">
+      <a name="submit-section" id="submit-section"></a>
+      <h3 class="submit__title">Оставьте заявку</h3>
+      <form action="URL" class="form" method="POST">
+        <fieldset class="form__fieldset">
+          <label class="form__label" for="name">ФИО<sup>&#10059;</sup></label>
+          <input class="form__input" type="text" name="name" id="name">
+          <label class="form__label" for="phone">Номер телефона<sup>&#10059;</sup></label>
+          <input class="form__input" type="text" name="phone" id="phone">
+          <label class="form__label form__label--agree" for="checkbox">
+            <input class="form__input" type="checkbox" name="checkbox" id="checkbox" required>
+            <p class="form__agree">Настоящим даю согласие сервиса на обработку и передачу моих персональных данных 
+            третьим лицам с целью обеспечения возможности использования сервиса Яндекс.Такси в качестве водителя такси</p>
+          </label>
+          <button class="form__btn btn" type="submit">Оставить заявку</button>
+        </fieldset>
+      </form>
+    </div>
+    <!-- submit wrapper layout-positioner -->
+    <div class="submit__bgi"></div>
+  </section>
+  <!-- submit section -->
+
+  <footer class="footer">
+    <div class="footer__wrapper layout-positioner">
+    <address class="footer__address">
+      Республика Дагестан 368600 г. Дербент </br>
+      ул. Имама Шамиля дом 18 кв. 12
+    </address>
+    </div>
+    <!-- footer wrapper layout-positioner -->
+  </footer>
+  <!-- footer -->
+</body>
+</html>

@@ -1,0 +1,693 @@
+@font-face {
+  font-family: "NotoSans";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("NotoSans"),
+       /* Если не получилось, загрузит woff2 */
+       url("../fonts/Notosansdisplayregular.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Notosansdisplayregular.woff") format("woff"),
+       url("../fonts/Notosansdisplayregular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Semibold";
+  font-style: normal;
+  font-weight: 600;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("NotoSans semibold"),
+       /* Если не получилось, загрузит woff2 */
+       url("../fonts/Notosansdisplaysemibold.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Notosansdisplaysemibold.woff") format("woff"),
+       url("../fonts/Notosansdisplaysemibold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NotoSans Light";
+  font-style: normal;
+  font-weight: 300;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("NotoSans CondensedLight"),
+       /* Если не получилось, загрузит woff2 */
+       url("../fonts/Notosansdisplaycondensedlight.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("../fonts/Notosansdisplaycondensedlight.woff") format("woff"),
+       url("../fonts/Notosansdisplaycondensedlight.ttf") format("ttf");
+}
+
+/* primary color styles */
+$primary-yellow: #f7c415;
+$secondary-yellow: #e9bb1e;
+$disabled-yellow: #edd47c;
+
+/* text color styles */
+$primary-text-color: #0c0c0d;
+$secondary-text-color: #ffffff;
+
+/* fonts set */
+$font-stack-regular: 'NotoSans', Roboto, Helvetica, sans-serif;
+$font-stack-light: 'NotoSans Light', Roboto, Helvetica, sans-serif;
+$font-stack-semibold: 'NotoSans semibold', Roboto, Helvetica, sans-serif;
+
+$width-small: 320px;
+$width-small-max: 767px;
+$width-medium: 768px;
+$width-large: 1150px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$margin-large: calc((100% - #{$width-large}) / 2);
+
+.page {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack-regular;
+  font-size: 16px;
+  line-height: 1;
+  color: $primary-text-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3,
+h4, h5, h6,
+p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.layout-positioner {
+  width: 100%;
+  margin: 0;
+  padding: 0 16px;
+  outline: 1px solid red;
+
+  @media (min-width: $width-medium) {
+    padding: 0 24px;
+  }
+
+  @media (min-width: $width-large) {
+    width: 980px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 10px 0;
+  font-family: $font-stack-regular;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: stretch;
+  }
+
+  &__btn {
+    margin: 0;
+  }
+}
+
+/* title styles */
+
+.title {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack-semibold;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+
+  /* tablet screen */
+  @media (min-width: $width-medium) {
+    font-size: 24px;
+  }
+}
+
+/* yandex partner text */
+.ya-partner-text {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack-light;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+
+  /* tablet screen */
+  @media (min-width: $width-medium) {
+    font-size: 14px;
+  }  
+}
+
+/* button syles */
+.btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 2px;
+  background-color: $primary-yellow;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-yellow;
+  }
+
+  &:disabled {
+    background-color: $disabled-yellow;
+  }
+
+  /* header button link styles */
+  &__link {
+    margin: 0;
+    padding: 5px;
+    font-family: $font-stack-regular;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 400;
+    color: $primary-text-color;
+    text-decoration: none;
+
+    @media (min-width: $width-medium) {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* jumbotron section style*/
+.jumbotron {
+  background-color: #c6c6c6;
+  background-image: url("../img/jumbotron.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    min-height: 30vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      min-height: 50vh;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      min-height: 70vh;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+    font-family: $font-stack-semibold;
+    font-size: 16px;
+    line-height: 1;
+    color: $secondary-text-color;
+    
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      font-size: 24px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      font-size: 48px;
+    }
+  }
+
+  &__yandex {
+    display: block;
+    margin-top: 10px;
+    font-family: $font-stack-light;
+    font-size: 12px;
+
+    /* tablet screen*/
+    @media (min-width: $width-medium) {
+      font-size: 18px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      font-size: 28px;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      margin-bottom: 40px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+/* advantage section style */
+.advantages {
+  margin: 0;
+
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @media (min-width: $width-medium) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: $font-stack-semibold;
+    font-size: 18px;
+    line-height: 1;
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      font-size: 20px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+    
+    &--clock {
+      background-image: url("../img/icons-clock.svg");
+    }
+
+    &--calendar {
+      background-image: url("../img/icons-calendar.svg");
+    }
+
+    &--wallet {
+      background-image: url("../img/icons-wallet.svg");
+    }
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+    font-family: $font-stack-regular;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      width: 220px;
+      font-size: 16px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      width: 300px;
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+
+/* how to start section */
+.how-to-start {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  color: $secondary-text-color;
+  background-color: $primary-text-color;
+    
+  /* tablet screen */
+  @media (min-width: $width-medium) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  /* desktop screen */
+  @media (min-width: $width-large) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  &__wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    /* tablet screen*/
+    @media (min-width: $width-medium) {
+      width: 50%;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin-left: $margin-large;
+    }
+  }
+
+  &__bgi {
+    content: "";
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    background-image: url("../img/hotToStart-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    /* tablet screen*/
+    @media (min-width: $width-medium) {
+      width: 50%;
+      min-height: 350px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: $font-stack-semibold;
+    font-size: 24px;
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      margin-bottom: 30px;
+      padding: 0;
+      font-size: 24px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      margin-bottom: 30px;
+      padding: 0;
+      font-size: 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-family: $font-stack-regular;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 50%;
+    background-color: $primary-yellow;
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    width: 85%;
+    margin: 0;
+    margin-left: 15px;
+    padding: 0;
+    color: inherit;
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      font-size: 16px;
+    }
+  }
+}
+
+/* submint section */
+.submit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: stretch;
+  background-color: #dddddd;
+
+  /* desktop screen */
+  @media (min-width: $width-large) {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    @media (min-width: $width-medium) {
+      width: 50%;
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    font-family: $font-stack-semibold;
+    font-size: 24px;
+  }  
+
+  &__bgi {
+    content: "";
+    display: block;
+    width: 100%;
+    min-height: 300px;
+    background-image: url("../img/submit.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: $width-medium) {
+      width: 50%;
+      min-height: 425px;
+      background-size: cover;
+    }
+
+    @media (min-width: $width-large) {
+      min-height: 470px;
+      background-position: center;
+    }
+  }
+}
+
+.form {
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__label {
+    font-family: $font-stack-light;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: .35px;
+
+    &--agree {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    & > sup {
+      font-size: 8px;
+      margin-left: 3px;
+    }
+  }
+
+  &__agree {
+    width: 85%;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    line-height: 1;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+
+    &[type="checkbox"] {
+      appearance: none;
+      position: relative;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      background-color: #dddddd;
+    }
+
+    &[type="checkbox"]::before {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      content: "";
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-color: #dddddd;
+      background-image: url("../img/checkbox.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &[type="checkbox"]:checked::before {
+      background-image: url("../img/checkbox-checked.svg");
+    }
+  }
+
+  &__input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 8px 10px;
+    font-family: $font-stack-regular;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    color: $primary-text-color;
+  }
+}
+
+/* footer styles */
+.footer {
+  font-family: $font-stack-light;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.4px;
+
+  &__wrapper {
+    padding: 10px;
+    padding-bottom: 10px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+}
+
+
