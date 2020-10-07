@@ -95,7 +95,6 @@ p, ul, li {
   width: 100%;
   margin: 0;
   padding: 0 16px;
-  outline: 1px solid red;
 
   @media (min-width: $width-medium) {
     padding: 0 24px;
@@ -387,7 +386,6 @@ p, ul, li {
 
 /* how to start section */
 .how-to-start {
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -408,41 +406,67 @@ p, ul, li {
     justify-content: flex-start;
   }
 
+  &__col {
+    width: 100%;
+    min-height: 300px;
+
+    &--1 {
+      background-color: #0d0d0d;
+
+      /* tablet screen*/
+      @media (min-width: $width-medium) {
+        width: 50%;
+        min-height: 350px;
+      }
+
+      /* desktop screen*/
+      @media (min-width: $width-large) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;
+        min-height: 450px;
+      }
+    }
+
+    &--2 {
+      background-color: #dddddd;
+      content: "";
+      display: block;
+      min-height: 300px;
+      background-image: url("../img/hotToStart-1.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      /* tablet screen*/
+      @media (min-width: $width-medium) {
+        width: 50%;
+        min-height: 350px;
+      }
+
+      /* desktop screen*/
+      @media (min-width: $width-large) {
+        width: 50%;
+        min-height: 450px;
+      }
+    }
+  }
+
   &__wrapper {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 16px;
     
     /* tablet screen*/
     @media (min-width: $width-medium) {
-      width: 50%;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding: 60px 24px;
+      margin-left: auto;
     }
 
     /* desktop screen */
     @media (min-width: $width-large) {
-      width: auto;
       display: flex;
       flex-direction: column;
-      margin: 0;
-      margin-left: $margin-large;
-    }
-  }
-
-  &__bgi {
-    content: "";
-    display: block;
-    width: 100%;
-    min-height: 300px;
-    background-image: url("../img/hotToStart-1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    /* tablet screen*/
-    @media (min-width: $width-medium) {
-      width: 50%;
-      min-height: 350px;
+      margin-right: 50px;
     }
   }
 
@@ -530,20 +554,71 @@ p, ul, li {
     justify-content: center;
   }
 
+  &__col {
+    width: 100%;
+    min-height: 300px;
+
+    &--1 {
+      background-color: #dddddd;
+
+      /* tablet screen*/
+      @media (min-width: $width-medium) {
+        width: 50%;
+        min-height: 350px;
+      }
+
+      /* desktop screen*/
+      @media (min-width: $width-large) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 50%;
+        min-height: 450px;
+      }
+    }
+
+    &--2 {
+      background-color: #dddddd;
+      content: "";
+      display: block;
+      min-height: 300px;
+      background-image: url("../img/submit.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      /* tablet screen*/
+      @media (min-width: $width-medium) {
+        width: 50%;
+        min-height: 445px;
+      }
+
+      /* desktop screen*/
+      @media (min-width: $width-large) {
+        width: 50%;
+        min-height: 470px;
+      }
+    }
+  }
+
   &__wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 16px;
     
+    /* tablet screen */
     @media (min-width: $width-medium) {
-      width: 50%;
-      padding-top: 60px;
-      padding-bottom: 60px;
+      width: auto;
+      margin-left: auto;
+      padding: 40px 24px;
     }
 
     /* desktop screen */
     @media (min-width: $width-large) {
       display: flex;
       flex-direction: column;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 60px;
+      padding: 60px 24px;
     }
   }
 
@@ -554,31 +629,10 @@ p, ul, li {
     font-family: $font-stack-semibold;
     font-size: 24px;
   }  
-
-  &__bgi {
-    content: "";
-    display: block;
-    width: 100%;
-    min-height: 300px;
-    background-image: url("../img/submit.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    @media (min-width: $width-medium) {
-      width: 50%;
-      min-height: 425px;
-      background-size: cover;
-    }
-
-    @media (min-width: $width-large) {
-      min-height: 470px;
-      background-position: center;
-    }
-  }
 }
 
 .form {
+
   &__fieldset {
     margin: 0;
     padding: 0;
@@ -586,10 +640,29 @@ p, ul, li {
   }
 
   &__label {
-    font-family: $font-stack-light;
-    font-size: 14px;
-    line-height: 1;
-    letter-spacing: .35px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    & > sup {
+      font-size: 8px;
+      margin-left: 3px;
+    }
+
+    /* tablet screen */
+    @media (min-width: $width-medium) {
+      flex-direction: column;
+      font-size: 16px;
+    }
+
+    /* desktop screen */
+    @media (min-width: $width-large) {
+      font-size: 16px;
+    }
 
     &--agree {
       display: flex;
@@ -601,14 +674,22 @@ p, ul, li {
       margin-top: 15px;
       margin-bottom: 15px;
     }
+  }
 
-    & > sup {
-      font-size: 8px;
-      margin-left: 3px;
+  &__label-text {
+    margin-bottom: 15px;
+    font-family: $font-stack-light;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: .35px;
+
+    /* tablet screen*/
+    @media (min-width: $width-medium) {
+      font-size: 16px;
     }
   }
 
-  &__agree {
+  &__agreement {
     width: 85%;
     margin: 0;
     margin-left: 10px;
@@ -620,8 +701,6 @@ p, ul, li {
     display: block;
     width: 100%;
     margin: 0;
-    margin-top: 10px;
-    margin-bottom: 15px;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
@@ -672,6 +751,7 @@ p, ul, li {
   }
 }
 
+
 /* footer styles */
 .footer {
   font-family: $font-stack-light;
@@ -688,6 +768,4 @@ p, ul, li {
   &__address {
     font-style: normal;
   }
-}
-
-
+} 
