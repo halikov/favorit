@@ -8,6 +8,7 @@
 *.sublime*
 *.eps
 *.swp
+*.fig
 node_modules/
 npm-debug.*
 build/

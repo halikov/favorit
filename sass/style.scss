@@ -1,3 +1,5 @@
+@import '../css/normalize.css';
+
 @font-face {
   font-family: "NotoSans";
   font-style: normal;
@@ -9,6 +11,7 @@
        /* Если браузер не поддерживает woff2, загрузит woff */
        url("../fonts/Notosansdisplayregular.woff") format("woff"),
        url("../fonts/Notosansdisplayregular.ttf") format("ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -22,6 +25,7 @@
        /* Если браузер не поддерживает woff2, загрузит woff */
        url("../fonts/Notosansdisplaysemibold.woff") format("woff"),
        url("../fonts/Notosansdisplaysemibold.ttf") format("ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +39,7 @@
        /* Если браузер не поддерживает woff2, загрузит woff */
        url("../fonts/Notosansdisplaycondensedlight.woff") format("woff"),
        url("../fonts/Notosansdisplaycondensedlight.ttf") format("ttf");
+  font-display: swap;
 }
 
 /* primary color styles */
